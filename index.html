@@ -7,7 +7,37 @@
   </head>
   <body>
     <h1>Thi is title</h1>
+    <ul>
+      <li>
+        <span class="name">This is list item 1</span>
+      </li>
+      <li>
+        <span class="name">This is list item 2</span>
+      </li>
+      <li>
+        <span class="name">This is list item 3</span>
+      </li>
+      <li>
+        <span class="name">This is list item 4</span>
+      </li>
+      <li>
+        <span class="name">This is list item 5</span>
+      </li>
+    </ul>
+    <script>
+      let htmlCollection = document.getElementsByClassName(".name");
 
-    <script></script>
+      console.log(Array.isArray(htmlCollection));
+
+      let htmlArray = Array.from(htmlCollection);
+
+      console.log(Array.isArray(htmlArray));
+
+      htmlArray.forEach((html) => console.log(html));
+
+      for (let i = 0; i < htmlCollection.length; i++) {
+        console.log(htmlCollection[i]);
+      }
+    </script>
   </body>
 </html>
