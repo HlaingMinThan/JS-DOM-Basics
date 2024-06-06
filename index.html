@@ -7,7 +7,36 @@
   </head>
   <body>
     <h1>Thi is title</h1>
+    <ul>
+      <li>
+        <span class="name">This is item 1</span>
+      </li>
+      <li>
+        <span class="name">This is item 2</span>
+      </li>
+      <li>
+        <span class="name">This is item 3</span>
+      </li>
+      <li>
+        <span class="name">This is item 4</span>
+      </li>
+      <li>
+        <span class="name">This is item 5</span>
+      </li>
+    </ul>
 
-    <script></script>
+    <script>
+      //this will give the first html element that contains class name
+      let item1 = document.querySelector(".name");
+      let item2 = document.querySelector("ul li:nth-child(2) .name");
+      // to get all element that contain class name
+      let nodeList = document.querySelectorAll(".name");
+
+      nodeList.forEach((node) => console.log(node));
+
+      for (let i = 0; i < nodeList.length; i++) {
+        console.log(nodeList[i]);
+      }
+    </script>
   </body>
 </html>
