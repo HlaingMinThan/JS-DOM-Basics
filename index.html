@@ -6,8 +6,21 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Thi is title</h1>
+    <h1 id="title">This is title</h1>
 
-    <script></script>
+    <ul id="list">
+      <li>List item One.</li>
+      <li>List item Two.</li>
+      <li>List item Three.</li>
+      <li>List item Four.</li>
+    </ul>
+
+    <script>
+      let title = document.getElementById("title");
+      title.textContent += " new";
+      let list = document.getElementById("list");
+      list.innerHTML += "<li>List item Five.</li>";
+      console.log(list.innerHTML);
+    </script>
   </body>
 </html>
