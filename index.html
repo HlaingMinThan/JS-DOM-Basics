@@ -6,8 +6,20 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Thi is title</h1>
-
-    <script></script>
+    <h1 id="heading">Welcome From DOM Basic Course</h1>
+    <div class="blog">
+      <h1>This is blog title</h1>
+      <p>this is blog desc</p>
+    </div>
+    <script>
+      let heading = document.getElementById("heading");
+      let blog = document.getElementsByClassName("blog")[0];
+      console.log("this is heading node type : " + heading.nodeType);
+      console.log("this is heading node name : " + heading.nodeName);
+      let cloneHeading = heading.cloneNode(true);
+      let cloneBlog = blog.cloneNode(true);
+      console.log(cloneBlog);
+      console.log(cloneHeading);
+    </script>
   </body>
 </html>
